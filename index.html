@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Model Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#elements">DOM Elements</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#manipulation">DOM Manipulation</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="introduction">
+        <h1>Understanding the DOM Model</h1>
+        <p>
+          The Document Object Model (DOM) is a programming interface for HTML
+          documents. It represents the page as a tree-like structure where each
+          node is an object representing a part of the document.
+        </p>
+        <div class="interactive-demo" id="demo-tree">
+          <h3>DOM Tree Example</h3>
+
+          <div class="tree-node" id="root-node">
+            <span>document</span>
+            <div class="tree-node">
+              <span>html</span>
+              <div class="tree-node">
+                <span>head</span>
+              </div>
+              <div class="tree-node">
+                <span>body</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="elements">
+        <h2>Working with DOM Elements</h2>
+        <div class="interactive-demo">
+          <div id="element-selection">
+            <h3>Element Selection</h3>
+            <p id="select-me">Click the button to select this paragraph!</p>
+            <button onclick="selectElement()">Select Element</button>
+          </div>
+          <div id="tic-tac-toe">
+            <h3>Tic Tac Toe Game</h3>
+            <div id="game-status" class="game-status"></div>
+            <div class="game-grid">
+              <div class="cell" id="cell-0"></div>
+              <div class="cell" id="cell-1"></div>
+              <div class="cell" id="cell-2"></div>
+              <div class="cell" id="cell-3"></div>
+              <div class="cell" id="cell-4"></div>
+              <div class="cell" id="cell-5"></div>
+              <div class="cell" id="cell-6"></div>
+              <div class="cell" id="cell-7"></div>
+              <div class="cell" id="cell-8"></div>
+            </div>
+            <button id="reset-game">Reset Game</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="events">
+        <h2>DOM Events</h2>
+        <div class="interactive-demo">
+          <div id="event-demo">
+            <h3>Event Handling</h3>
+            <button id="click-btn">Click Me!</button>
+            <div id="event-output">Events will be displayed here</div>
+          </div>
+          <div id="conditional-event-demo">
+            <h3>Conditional Event Handling</h3>
+            <div id="interactive-box" class="interactive-box">
+              Hover and press keys!
+            </div>
+            <div id="conditional-output">
+              Try moving your mouse and pressing Shift or Ctrl keys
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="manipulation">
+        <h2>DOM Manipulation</h2>
+        <div class="interactive-demo">
+          <div id="manipulation-demo">
+            <h3>Add & Remove Elements</h3>
+            <input type="text" id="new-item" placeholder="Enter text" />
+            <button id="add-btn">Add Item</button>
+            <ul id="item-list"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="week6.js"></script>
+  </body>
+</html>
